@@ -4,4 +4,5 @@
 #vim files
 *.sw[p|o]
 
-## generic files to ignore
+# local module
+node_modules
