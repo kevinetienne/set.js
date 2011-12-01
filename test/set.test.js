@@ -21,6 +21,16 @@ vows.describe('Set').addBatch({
                 assert.equal(1 in topic, true);
             }
         }
+        'when deleting': {
+            topic: (function(a_set) {
+                a_set.update(1,2,3,45,6,42);
+                a_set.remove(42);
+                return a_set;
+            },
+            '42 should be removed': function(topic) {
+                assert.isFalse(42 in topic);
+            }
+        }
     }
 }).run();
 
