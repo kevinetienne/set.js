@@ -10,6 +10,16 @@ vows.describe('Set').addBatch({
 
         'is Empty': function(topic) {
             assert.equal(topic.length, 0);
+        },
+
+        'when inserting': {
+            topic: function(a_set) {
+                a_set.update(1);
+                return a_set;
+            },
+            'should contain 1': function(topic) {
+                assert.equal(1 in topic, true);
+            }
         }
     }
 }).run();
