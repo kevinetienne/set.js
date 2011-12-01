@@ -39,6 +39,7 @@ vows.describe('Set').addBatch({
             },
             '42 should be removed': function(topic) {
                 assert.isFalse(42 in topic);
+                assert.equal(topic.length, 5);
             }
         }
     }
