@@ -19,10 +19,18 @@ vows.describe('Set').addBatch({
             },
             'should contain 1': function(topic) {
                 assert.isTrue(1 in topic);
+            },
+            topic: function(a_set) {
+                a_set.update([1,2,3,4,5,6]);
+                return a_set;
+            },
+            'should update an array': function(topic) {
+                assert.equal(topic.length, 6);
             }
         },
+
         'when deleting': {
-            topic: (function(a_set) {
+            topic: function(a_set) {
                 a_set.update(1,2,3,45,6,42);
                 a_set.remove(42);
                 return a_set;
