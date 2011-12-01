@@ -18,7 +18,7 @@ vows.describe('Set').addBatch({
                 return a_set;
             },
             'should contain 1': function(topic) {
-                assert.equal(1 in topic, true);
+                assert.isTrue(1 in topic);
             }
         }
         'when deleting': {
