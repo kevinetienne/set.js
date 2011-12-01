@@ -20,7 +20,7 @@ vows.describe('Set').addBatch({
             'should contain 1': function(topic) {
                 assert.isTrue(1 in topic);
             }
-        }
+        },
         'when deleting': {
             topic: (function(a_set) {
                 a_set.update(1,2,3,45,6,42);
