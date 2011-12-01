@@ -33,12 +33,11 @@ vows.describe('Set').addBatch({
 
         'when deleting': {
             topic: function(a_set) {
-                a_set.update(1,2,3,45,6,42);
-                a_set.remove(42);
+                a_set.remove(4);
                 return a_set;
             },
             '42 should be removed': function(topic) {
-                assert.isFalse(42 in topic);
+                assert.isFalse(4 in topic);
                 assert.equal(topic.length, 5);
             }
         }
