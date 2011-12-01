@@ -12,14 +12,16 @@ vows.describe('Set').addBatch({
             assert.equal(topic.length, 0);
         },
 
-        'when inserting': {
+        'when inserting a number': {
             topic: function(a_set) {
                 a_set.update(1);
                 return a_set;
             },
             'should contain 1': function(topic) {
                 assert.isTrue(1 in topic);
-            },
+            }
+        },
+        'when inserting an array': {
             topic: function(a_set) {
                 a_set.update([1,2,3,4,5,6]);
                 return a_set;
